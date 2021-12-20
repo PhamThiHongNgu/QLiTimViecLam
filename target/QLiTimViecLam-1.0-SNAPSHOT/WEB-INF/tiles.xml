@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name ="baseLayout" template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+        <put-attribute name="content" value="BASE" />
+    </definition>
+    
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ" />
+        <put-attribute name="content" value="/WEB-INF/jsp/index.jsp" />
+    </definition>
+    
+    <definition name="viecLam" extends="baseLayout">
+        <put-attribute name="title" value="Quản lí việc làm" />
+        <put-attribute name="content" value="/WEB-INF/jsp/viecLam.jsp" />
+    </definition>
+    <definition name="timViec" extends="baseLayout">
+        <put-attribute name="title" value="Người tìm việc" />
+        <put-attribute name="content" value="/WEB-INF/jsp/timViec.jsp" />
+    </definition>
+    
+    <definition name ="baseAdminLayout" template="/WEB-INF/layout/base-admin.jsp">
+        <put-attribute name="title" value="Quản trị hệ thống tìm việc làm" />
+        <put-attribute name="left" value="/WEB-INF/layout/admin-left.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layout/admin-footer.jsp" />
+        <put-attribute name="content" value="BASE" />
+    </definition>
+     <definition name="nghanhnghe-state" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê ứng viên theo nghành nghề" />
+        <put-attribute name="content" value="/WEB-INF/jsp/nghanhnghe-stats.jsp" />
+    </definition>
+</tiles-definitions>
+
